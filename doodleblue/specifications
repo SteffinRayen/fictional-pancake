@@ -1,0 +1,24 @@
+Specifications:
+
+	Logo Designing:
+		Logo 1. Design a logo for an organization "recordsguru" who provides end to end solution for records and information retention and management.
+		Logo 2. Design a logo for dating app "Connekt"
+		Logo 3. Design a logo for messaging app "Txtange"
+		Logo 4. Design a logo for Voting system  app "hote"
+		Logo 5. Design a logo for wedding planner  app "Boda" (Boda means wedding in spanish)
+
+	OLA Dashboard
+
+		Driver:
+			Login Page
+			Register Page
+			Forget Pasword
+
+		Dashboard
+			No of users
+			No of drivers
+			No of succcessful rides
+			No of active rides
+			No of active drivers
+			No of active users
+			No of cancelled rides

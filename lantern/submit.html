@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags always come first -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title>Lantern - Submit</title>
+      <!-- FavIcon -->
+      <link href="assets/img/favicon.ico" rel="icon" type="image/x-icon" />
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+      <!-- Bootstrap core CSS -->
+      <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Material Design -->
+      <link href="assets/css/materialD.css" rel="stylesheet">
+      <!-- Custom Stylesheet-->
+      <link href="assets/css/custom.css" rel="stylesheet">
+   </head>
+   <body class="fixed-sn dark-skin">
+      <!--Double navigation-->
+      <header>
+         <!--Navbar-->
+         <nav class="navbar navbar-fixed-top scrolling-navbar double-nav">
+            <div class="container-fluid">
+               <div class="row">
+                  <!-- Logo -->
+                  <div class="col-sm-6 ">
+                     <a class="nav-logo"><img src="assets/img/logo.jpg"></a>
+                  </div>
+                  <!-- Logo -->
+                  <!-- Links to the right -->
+                  <div class="col-sm-6 ">
+                     <ul class="nav navbar-nav float-xs-right">
+                        <li class="nav-item ">Submisson <a class="nav-avatar hm-zoom"><img class="rounded-circle" src="assets/img/avatar4.jpg"></a>
+                           <div class="btn-group">
+                               <button class="btn dropdown-toggle black" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+
+                               <div class="dropdown-menu dropdown-menu-right">
+                                   <a class="dropdown-item black-text" href="#"><i class="fa fa-user"></i>&nbsp;&nbsp; Dashboard</a>
+                                   <a class="dropdown-item black-text" href="#"><i class="fa fa-cogs"></i>&nbsp;&nbsp; Settings</a>
+                                   <div class="dropdown-divider black"></div>
+                                   <a class="dropdown-item black-text" href="#"><i class="fa fa-sign-out"></i>&nbsp;&nbsp; Log Out</a>
+                               </div>
+                           </div>
+                        </li>
+                     </ul>
+                  </div>
+                  <!-- Links to the right -->
+               </div>
+            </div>
+         </nav>
+         <!--/Navbar-->
+      </header>
+      <!--/Double navigation-->
+      <!-- Main layout -->
+      <main>
+         
+            <!--Post-->
+            <div class="row">
+               <!--Main listing-->
+               <div class="col-md-6 offset-md-3 ">
+                  <div style="height: 50px;"></div>
+                  <!--Section: Image post with description-->
+                  <section class="section extra-margins">
+                     <!--Image Post-->
+                     <div class="row wow fadeIn " data-wow-delay="0.3s">
+                        <form onsubmit="return Validate(this);">
+                              <!--First row-->
+                              <div class="row">
+                                 <div class="col-md-12">
+                                    <h3 class="text-xs-center"><i class="fa fa-file"></i> Submit your Work</h3>
+                                    <br>
+                                    <div class="md-form">
+                                       <input type="text" id="form51" class="form-control" required>
+                                       <label for="form51" class="">Name</label>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!--/First row-->
+                              <!--Second row-->
+                              <div class="row">
+                                 <div class="col-md-12">
+                                    <div class="md-form">
+                                       <input type="text" id="form51" class="form-control" required>
+                                       <label for="form51" class="">Title</label>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!--/Second row-->
+                              <!--Third row-->
+                              <div class="row">
+                                 <div class="col-md-12">
+                                    <div class="md-form">
+                                       <input type="text" id="form51" class="form-control" required>
+                                       <label for="form51" class="">Caption</label>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!--/Third row-->
+                              <!--Fourth row-->
+                              <div class="file-field">
+                                 <div class="btn btn-primary" >
+                                    <span>Choose file</span>
+                                    <input type="file">
+                                 </div>
+                                 <div class="file-path-wrapper">
+                                    <input class="file-path validate" type="text" placeholder="Upload your file" required>
+                                 </div>
+                              </div>
+                              <!--/Fourth row-->
+                           
+                              <br><br>
+                              <!--Genre Choosing-->
+                              <div class="dropdown float-xs-left">
+                                 <select class="mdb-select" required>
+                                     <option value="" disabled selected>Choose your option</option>
+                                     <option value="1">Photography</option>
+                                     <option value="2">Art</option>
+                                     <option value="3">Sculpture</option>
+                                     <option value="4">Literature</option>
+                                     <option value="5">Gif</option>
+                                 </select>
+                                 <label>Genre</label>
+                              </div>
+                              
+                              <!--Genre Choosing-->
+                              <div class="float-xs-right">
+                                 <input type="submit" class="btn black" value="Submit !" / >
+                              </div>
+                           </div>
+                        </form>
+                        <br><br>
+                        
+                     </div>
+                  </section>
+               </div>
+               <!--/.Main listing-->
+            </div>
+            <!--/.Post-->
+         
+      </main>
+      <!--/ Main layout -->
+      <!--Footer-->
+      <footer class="page-footer center-on-small-only">
+         <!--Copyright-->
+         <div class="footer-copyright wow fadeIn" data-wow-delay="0.3s">
+            <div class="container-fluid">
+               © 2017 Copyright: <a href="#"> Lantern </a>
+            </div>
+         </div>
+         <!--/Copyright-->
+      </footer>
+      <!--/Footer-->
+      <!-- SCRIPTS -->
+      <!-- JQuery -->
+      <script type="text/javascript" src="assets/js/jquery-3.1.1.min.js"></script>
+      <!-- Tooltips -->
+      <script type="text/javascript" src="assets/js/tether.min.js"></script>
+      <!-- Bootstrap core JavaScript -->
+      <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+      <!-- Material Design core JavaScript -->
+      <script type="text/javascript" src="assets/js/materialD.min.js"></script>
+      <!-- Mood Navigation JavaScript -->
+      <script type="text/javascript" src="assets/js/moodCircleNav.js"></script> 
+      <script>
+         // Animation init
+         new WOW().init();
+         $(document).ready(function() {
+          $('.mdb-select').material_select();
+        });
+
+         var _validFileExtensions = [".jpg", ".jpeg", ".bmp", ".gif", ".png", ".txt"];    
+         function Validate(oForm) {
+             var arrInputs = oForm.getElementsByTagName("input");
+             for (var i = 0; i < arrInputs.length; i++) {
+                 var oInput = arrInputs[i];
+                 if (oInput.type == "file") {
+                     var sFileName = oInput.value;
+                     if (sFileName.length > 0) {
+                         var blnValid = false;
+                         for (var j = 0; j < _validFileExtensions.length; j++) {
+                             var sCurExtension = _validFileExtensions[j];
+                             if (sFileName.substr(sFileName.length - sCurExtension.length, sCurExtension.length).toLowerCase() == sCurExtension.toLowerCase()) {
+                                 blnValid = true;
+                                 break;
+                             }
+                         }
+                         
+                         if (!blnValid) {
+                             alert("Sorry, " + sFileName + " is invalid, allowed extensions are: " + _validFileExtensions.join(", "));
+                             return false;
+                         }
+                     }
+                 }
+             }
+           
+             return true;
+         }
+         
+      </script>
+   </body>
+</html>

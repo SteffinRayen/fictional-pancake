@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title>Water Supply Management</title>
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+      <!-- Bootstrap core CSS -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <!-- Material Design -->
+      <link href="css/matD.css" rel="stylesheet">
+   </head>
+   <body class="fixed-sn white-skin">
+      <!--Double navigation-->
+      <header>
+         <!-- Navbar -->
+         <nav class="navbar fixed-top navbar-toggleable-md navbar-dark scrolling-navbar double-nav">
+            <!-- SideNav slide-out button -->
+            <!-- Breadcrumb-->
+            <div class=" mr-auto" style="padding-left: 10px;padding-top: 10px;">
+               <p>Water Supply Management</p>
+            </div>
+         </nav>
+         <!-- /.Navbar -->
+      </header>
+      <!--/.Double navigation-->
+      <!--Main layout-->
+      <main class="">
+         <div class="container-fluid">
+            <!--Section: Main Chart-->
+            <section class="section">
+               <!--Main row-->
+               <div class="row">
+                  <div class="col-md-12">
+                     <!--Card-->
+                     <div class="card card-cascade narrower">
+                        <!--Admin panel-->
+                        <div class="admin-panel">
+                           <!--First row-->
+                           <div class="row mb-0">
+                              <!--First column-->
+                              <div class="col-md-5">
+                                 <!--Panel title-->
+                                 <div class="view left primary-color">
+                                    <h2>Tank Water Levels</h2>
+                                 </div>
+                                 <!--/Panel title-->
+                                 <!--Panel data-->
+                                 <div class="row card-block pt-3">
+                                    <!--First column-->
+                                    <div class="col-md-12">
+                                       <!--Date select-->
+                                       <h4><span class="badge big-badge primary-color">Monitor</span></h4>
+                                       <p>Some Description here....</p>
+                                       <br>
+                                       <!--Date pickers-->
+                                       <h4><span class="badge big-badge red">Errors</span></h4>
+                                       <br>
+                                       <div class="md-form ">
+                                          <textarea type="text" id="form78" class="md-textarea"></textarea>
+                                       </div>
+                                    </div>
+                                    <!--/First column-->
+                                 </div>
+                                 <!--/Panel data-->
+                              </div>
+                              <!--/First column-->
+                              <!--Second column-->
+                              <div class="col-md-7">
+                                 <!--Cascading element-->
+                                 <div class="view right primary-color mb-r">
+                                    <!--Main chart-->
+                                    <canvas id="waterLevels" height="155px"></canvas>
+                                 </div>
+                                 <!--/Cascading element-->
+                              </div>
+                              <!--/Second column-->
+                           </div>
+                           <!--/First row-->
+                        </div>
+                        <!--/Admin panel-->
+                     </div>
+                     <!--/.Card-->
+                  </div>
+               </div>
+               <!--/Main row-->
+            </section>
+            <!--/Section: Main chart-->
+            <!--Section: Main Chart-->
+            <section class="section">
+               <!--Main row-->
+               <div class="row">
+                  <div class="col-md-12">
+                     <!--Card-->
+                     <div class="card card-cascade narrower">
+                        <!--Admin panel-->
+                        <div class="admin-panel">
+                           <!--First row-->
+                           <div class="row m-b-0">
+                              <!--First column-->
+                              <div class="col-md-5">
+                                 <!--Panel title-->
+                                 <div class="view left primary-color">
+                                    <h2>Supply Predictions</h2>
+                                 </div>
+                                 <!--/Panel title-->
+                                 <!--Panel data-->
+                                 <div class="row card-block pt-3">
+                                    <!--First column-->
+                                    <div class="col-md-12">
+                                       <div class="row">
+                                          <div class="col-md-6">
+                                             <h4><span class="badge big-badge primary-color">Rations</span></h4>
+                                          </div>
+                                          <div class="col-md-6">
+                                             <div class="switch float-right">
+                                                <label>
+                                                <input type="checkbox">
+                                                <span class="lever"></span>
+                                                </label>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <br>
+                                       <!--Date pickers-->
+                                       <h5 class="text-center">Bulk Purchase in N days</h5>
+                                       
+                                       <div class="text-center">
+                                          <h4><span class="badge big-badge primary-color ">Purchase now!</span></h4>
+                                       </div>
+                                    </div>
+                                    <!--/First column-->
+                                 </div>
+                                 <!--/Panel data-->
+                              </div>
+                              <!--/First column-->
+                              <!--Second column-->
+                              <div class="col-md-7">
+                                 <!--Cascading element-->
+                                 <div class="view right primary-color">
+                                    <!--Main chart-->
+                                    <canvas id="prediction" height="155px"></canvas>
+                                 </div>
+                                 <!--/Cascading element-->
+                              </div>
+                              <!--/Second column-->
+                           </div>
+                           <!--/First row-->
+                        </div>
+                        <!--/Admin panel-->
+                     </div>
+                     <!--/.Card-->
+                  </div>
+               </div>
+               <!--/Main row-->
+            </section>
+            <!--/Section: Main chart-->
+         </div>
+      </main>
+      <!--/Main layout-->
+      <!-- SCRIPTS -->
+      <!-- JQuery -->
+      <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+      <!-- Bootstrap tooltips -->
+      <script type="text/javascript" src="js/tether.min.js"></script>
+      <!-- Bootstrap core JavaScript -->
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+      <!-- MDB core JavaScript -->
+      <script type="text/javascript" src="js/matD.min.js"></script>
+      <script>
+         $(function() {
+             var data = {
+                 labels: ["January", "February", "March", "April", "May", "June", "July"],
+                 datasets: [{
+                     label: "My First dataset",
+                     fillColor: "rgba(220,220,220,0.2)",
+                     strokeColor: "rgba(220,220,220,1)",
+                     pointColor: "rgba(220,220,220,1)",
+                     pointStrokeColor: "#fff",
+                     pointHighlightFill: "#fff",
+                     pointHighlightStroke: "rgba(0,0,0,.15)",
+                     data: [65, 59, 80, 81, 56, 55, 40],
+                     backgroundColor: "#4CAF50"
+                 }, {
+                     label: "My Second dataset",
+                     fillColor: "rgba(255,255,255,.25)",
+                     strokeColor: "rgba(255,255,255,.75)",
+                     pointColor: "#fff",
+                     pointStrokeColor: "#fff",
+                     pointHighlightFill: "#fff",
+                     pointHighlightStroke: "rgba(0,0,0,.15)",
+                     data: [28, 48, 40, 19, 86, 27, 90]
+                 }]
+             };
+             var option = {
+                 responsive: true,
+                 // set font color
+                 scaleFontColor: "#fff",
+                 // font family
+                 defaultFontFamily: "'Roboto', sans-serif",
+                 // background grid lines color
+                 scaleGridLineColor: "rgba(255,255,255,.1)",
+                 // hide vertical lines
+                 scaleShowVerticalLines: false,
+             };
+             var ctx = document.getElementById("waterLevels").getContext('2d');
+             var myBarChart = new Chart(ctx).Bar(data, option);
+         });
+      </script>
+      <script>
+         $(function() {
+             $('.min-chart#chart-prediction').easyPieChart({
+                 barColor: "#4caf50",
+                 onStep: function(from, to, percent) {
+                     $(this.el).find('.percent').text(Math.round(percent));
+                 }
+             });
+         });
+      </script>
+      <script>
+         $(function() {
+             var data = {
+                 labels: ["January", "February", "March", "April", "May", "June", "July"],
+                 datasets: [{
+                     label: "My First dataset",
+                     fillColor: "rgba(220,220,220,0.2)",
+                     strokeColor: "rgba(220,220,220,1)",
+                     pointColor: "rgba(220,220,220,1)",
+                     pointStrokeColor: "#fff",
+                     pointHighlightFill: "#fff",
+                     pointHighlightStroke: "rgba(0,0,0,.15)",
+                     data: [65, 59, 80, 81, 56, 55, 40],
+                     backgroundColor: "#4CAF50"
+                 }, ]
+             };
+             var option = {
+                 responsive: true,
+                 // set font color
+                 scaleFontColor: "#fff",
+                 // font family
+                 defaultFontFamily: "'Roboto', sans-serif",
+                 // background grid lines color
+                 scaleGridLineColor: "rgba(255,255,255,.1)",
+                 // hide vertical lines
+                 scaleShowVerticalLines: false,
+             };
+         
+             // Get the context of the canvas element we want to select
+             var ctx = document.getElementById("prediction").getContext('2d');
+             var myLineChart = new Chart(ctx).Line(data, option); //'Line' defines type of the chart.
+         });
+      </script>
+   </body>
+</html>
